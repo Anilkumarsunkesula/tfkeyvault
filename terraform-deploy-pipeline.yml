@@ -26,7 +26,7 @@ steps:
   displayName: Terraform Init
   inputs:
     TemplatePath: '$(TemplatePath)'
-    Arguments: 'init'
+    Arguments: 'init -backend-config="access_key=$(stg-key)"'
     InstallTerraform: true
     Version: '0.11.8'
     UseAzureSub: false
