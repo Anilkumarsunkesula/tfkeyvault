@@ -35,7 +35,7 @@ steps:
   displayName: Terraform Plan
   inputs:
     TemplatePath: '$(TemplatePath)'
-    Arguments: 'plan -var ''tenant_id=$(tenant-id)'' -var ''subscription_id=$(subscription-id)'' -var ''client_id=$(client-id)'' -var ''client_secret=$(client-secret)'''
+    Arguments: 'plan -var "tenant_id=$(tenant-id)" -var "subscription_id=$(subscription-id)" -var "client_id=$(client-id)" -var "client_secret=$(client-secret)"'
     InstallTerraform: true
     Version: '0.11.8'
     UseAzureSub: false
@@ -44,7 +44,7 @@ steps:
   displayName: Terraform apply
   inputs:
     TemplatePath: '$(TemplatePath)'
-    Arguments: 'apply --auto-approve -var ''tenant_id=$(tenant-id)'' -var ''subscription_id=$(subscription-id)'' -var ''client_id=$(client-id)'' -var ''client_secret=$(client-secret)'''
+    Arguments: 'apply --auto-approve -var "tenant_id=$(tenant-id)" -var "subscription_id=$(subscription-id)" -var "client_id=$(client-id)" -var "client_secret=$(client-secret)"'
     InstallTerraform: true
     Version: '0.11.8'
     UseAzureSub: false
