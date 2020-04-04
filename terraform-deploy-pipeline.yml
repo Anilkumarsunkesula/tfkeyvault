@@ -17,6 +17,11 @@ variables:
   TemplatePath: 'tf_keyvault'
   
 steps:
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'keyvault'
+    KeyVaultName: 'tlqldcdntestkeyvault'
+    SecretsFilter: '*'
 - task: Terraform@2
   displayName: Terraform Init
   inputs:
@@ -39,7 +44,7 @@ steps:
   displayName: Terraform apply
   inputs:
     TemplatePath: '$(TemplatePath)'
-    Arguments: 'apply --auto-approve'
+    Arguments: 'apply --auto-approve -var ''tenant_id=$(tenant-id)'' -var ''subscription_id=$(subscription-id)'' -var ''client_id=$(client-id )'' -var ''client_secret=$(client-secret)'''
     InstallTerraform: true
     Version: '0.11.8'
     UseAzureSub: false
