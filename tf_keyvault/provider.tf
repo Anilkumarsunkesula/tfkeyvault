@@ -13,11 +13,10 @@ provider "azurerm" {
 #   tenant_id       = "${var.tenant_id}"
 # }
 
-# terraform {
-#   backend "azurerm" {
-#     storage_account_name = "sa5d38"
-#     container_name       = "terraform"
-#     key                  = "terraform.tfstate"
-#     access_key           = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-#   }
-# }
+terraform {
+  backend "azurerm" {
+    storage_account_name = "sa5d38"
+    container_name       = "terraformkeyvault"
+    key                  = "terraformkeyvault.tfstate"
+  }
+}
