@@ -1,0 +1,6 @@
+subscription_id = ""
+client_id = ""
+client_secret = ""
+tenant_id = ""
+location = "West US 2"
+resource_group_name = "tflabrg"
