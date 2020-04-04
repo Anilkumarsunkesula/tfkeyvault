@@ -19,7 +19,7 @@ variables:
 steps:
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 'keyvault'
+    azureSubscription: 'keyvaultconnection'
     KeyVaultName: 'tlqldcdntestkeyvault'
     SecretsFilter: '*'
 - task: Terraform@2
